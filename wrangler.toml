@@ -1,4 +1,4 @@
-name = "dc_proxy"
+name = "docker_proxy"
 compatibility_date = "2025-01-01"
 
 [dev]
@@ -14,24 +14,15 @@ MODE = "debug"
 TARGET_UPSTREAM = "https://registry-1.docker.io"
 
 [env.production]
-name = "dc_proxy"
-# routes = [
-#   { pattern = "docker.libcuda.so", custom_domain = true },
-#   { pattern = "quay.libcuda.so", custom_domain = true },
-#   { pattern = "gcr.libcuda.so", custom_domain = true },
-#   { pattern = "k8s-gcr.libcuda.so", custom_domain = true },
-#   { pattern = "k8s.libcuda.so", custom_domain = true },
-#   { pattern = "ghcr.libcuda.so", custom_domain = true },
-#   { pattern = "cloudsmith.libcuda.so", custom_domain = true },
-# ]
+name = "docker_proxy"
+
 
 [env.production.vars]
 MODE = "production"
 TARGET_UPSTREAM = ""
 
 [env.staging]
-name = "dc_proxy-staging"
-# route = { pattern = "docker-staging.libcuda.so", custom_domain = true }
+name = "docker_proxy"
 
 [env.staging.vars]
 MODE = "staging"
